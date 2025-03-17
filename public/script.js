@@ -263,6 +263,9 @@ async function findRowInSheet(idURI) {
             if (idValue === idURI) {
                 orderDetails = {
                     maSanpham: row[4] || '',
+                    mLichsu: row[160] || '',
+                    m2Lichsu: row[161] || '',
+                    cLichsu: row[162] || '',
                 };
 
                 for (let j = 1; j <= 20; j++) {
@@ -284,6 +287,9 @@ async function findRowInSheet(idURI) {
                 }
 
                 document.getElementById('maSanpham').innerHTML = orderDetails.maSanpham.replace(/\n/g, '<br>');
+                document.getElementById('mLichsu').innerHTML = orderDetails.mLichsu.replace(/\n/g, '<br>');
+                document.getElementById('m2Lichsu').innerHTML = orderDetails.m2Lichsu.replace(/\n/g, '<br>');
+                document.getElementById('cLichsu').innerHTML = orderDetails.cLichsu.replace(/\n/g, '<br>');
 
                 for (let j = 1; j <= 20; j++) {
                     document.getElementById(`m_vt_${j}`).innerHTML = orderDetails[`m_vt_${j}`].replace(/\n/g, '<br>');
