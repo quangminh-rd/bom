@@ -1,0 +1,487 @@
+@page {
+    size: A4;
+    margin: 20mm;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background: url('https://i.imgur.com/BrJoeOv.png') no-repeat center center;
+    background-size: 210mm auto;
+    opacity: 0.99;
+}
+
+.content {
+    width: 100%;
+    max-width: 210mm;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+.m-table,
+.m2-table,
+.c-table {
+    width: 210mm;
+    /* Cố định chiều rộng 200mm */
+    table-layout: fixed;
+    /* Tự động điều chỉnh kích thước cột theo nội dung */
+    border-collapse: collapse;
+    margin-top: 5px;
+    font-size: 12px;
+    word-wrap: break-word;
+    /* Ngắt dòng cho nội dung dài */
+}
+
+.m-table th,
+.m-table td,
+.m2-table th,
+.m2-table td,
+.c-table th,
+.c-table td {
+    border: 1px solid #000;
+    padding: 5px;
+    word-wrap: break-word;
+    /* Đảm bảo nội dung dài tự ngắt dòng */
+    white-space: normal;
+    /* Cho phép xuống dòng tự nhiên */
+}
+
+.mcol-1 {
+    text-align: center;
+    width: 2%;
+}
+
+.mcol-2-H {
+    text-align: center;
+    width: 28%;
+}
+
+.mcol-3-H {
+    text-align: center;
+    width: 35%;
+}
+
+.mcol-4-H {
+    text-align: center;
+    width: 35%;
+}
+
+.mcol-2 {
+    text-align: left;
+    width: 28%;
+}
+
+.mcol-3 {
+    text-align: left;
+    width: 35%;
+}
+
+.mcol-4 {
+    text-align: left;
+    width: 35%;
+}
+
+.m2col-1 {
+    text-align: center;
+    width: 4%;
+}
+
+.m2col-2-H {
+    text-align: center;
+    width: 24%;
+}
+
+.m2col-3-H {
+    text-align: center;
+    width: 24%;
+}
+
+.m2col-4-H {
+    text-align: center;
+    width: 24%;
+}
+
+.m2col-5-H {
+    text-align: center;
+    width: 24%;
+}
+
+.m2col-2 {
+    text-align: left;
+    width: 24%;
+}
+
+.m2col-3 {
+    text-align: left;
+    width: 24%;
+}
+
+.m2col-4 {
+    text-align: left;
+    width: 24%;
+}
+
+.m2col-5 {
+    text-align: left;
+    width: 24%;
+}
+
+.ccol-1 {
+    text-align: center;
+    width: 2%;
+}
+
+.ccol-2-H {
+    text-align: center;
+    width: 38%;
+}
+
+.ccol-3-H {
+    text-align: center;
+    width: 60%;
+}
+
+.ccol-2 {
+    text-align: left;
+    width: 38%;
+}
+
+.ccol-3 {
+    text-align: left;
+    width: 60%;
+}
+
+.button-pdf {
+    background-color: #f30d0d;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    /* Bo tròn góc */
+    font-size: 16px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    z-index: 10;
+    /* Cố định ở dưới cùng */
+    left: 50%;
+    /* Căn giữa */
+    transform: translateX(-50%);
+    /* Căn giữa chính xác */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    /* Bóng mờ phía dưới */
+    transition: background-color 0.3s ease;
+    opacity: 0.9;
+    white-space: nowrap;
+    /* Ngăn nội dung xuống dòng */
+}
+
+.button-pdf:hover {
+    background-color: #910707;
+}
+
+
+@media print {
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    #content {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .button-excel {
+        display: none;
+    }
+
+    .button-pdf {
+        display: none;
+    }
+
+    @media print {
+        .button-pdf {
+            display: none;
+        }
+
+        .m-table tr {
+            page-break-inside: avoid;
+            /* Dành cho trình duyệt cũ */
+            break-inside: avoid;
+            /* Chuẩn mới */
+        }
+
+        .m-table td,
+        .m-table th {
+            padding: 5px;
+            /* Tăng padding để nội dung dễ đọc */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            /* Đảm bảo nội dung dài tự động xuống dòng */
+        }
+    }
+
+    /* Giữ nguyên các phần CSS khác và thêm thuộc tính sau vào table */
+    .m-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 5px;
+        table-layout: fixed;
+        /* Cố định layout bảng */
+        font-size: 12px;
+        word-wrap: break-word;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-family: 'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        background: url('https://i.imgur.com/BrJoeOv.png') no-repeat center center;
+        background-size: 210mm auto;
+        opacity: 0.99;
+    }
+
+    .content {
+        width: 100%;
+        max-width: 210mm;
+        margin: auto;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 1;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    p {
+        margin: 2px 0;
+        font-size: 8px;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto 16px;
+    }
+
+    .m-table,
+    .m2-table,
+    .c-table {
+        width: 210mm;
+        /* Cố định chiều rộng 200mm */
+        table-layout: fixed;
+        /* Tự động điều chỉnh kích thước cột theo nội dung */
+        border-collapse: collapse;
+        margin-top: 5px;
+        font-size: 12px;
+        word-wrap: break-word;
+        /* Ngắt dòng cho nội dung dài */
+    }
+
+    .m-table th,
+    .m-table td,
+    .m2-table th,
+    .m2-table td,
+    .c-table th,
+    .c-table td {
+        border: 1px solid #000;
+        padding: 5px;
+        word-wrap: break-word;
+        /* Đảm bảo nội dung dài tự ngắt dòng */
+        white-space: normal;
+        /* Cho phép xuống dòng tự nhiên */
+    }
+
+    .mcol-1 {
+        text-align: center;
+        width: 2%;
+    }
+
+    .mcol-2-H {
+        text-align: center;
+        width: 28%;
+    }
+
+    .mcol-3-H {
+        text-align: center;
+        width: 35%;
+    }
+
+    .mcol-4-H {
+        text-align: center;
+        width: 35%;
+    }
+
+    .mcol-2 {
+        text-align: left;
+        width: 28%;
+    }
+
+    .mcol-3 {
+        text-align: left;
+        width: 35%;
+    }
+
+    .mcol-4 {
+        text-align: left;
+        width: 35%;
+    }
+
+    .m2col-1 {
+        text-align: center;
+        width: 4%;
+    }
+
+    .m2col-2-H {
+        text-align: center;
+        width: 24%;
+    }
+
+    .m2col-3-H {
+        text-align: center;
+        width: 24%;
+    }
+
+    .m2col-4-H {
+        text-align: center;
+        width: 24%;
+    }
+
+    .m2col-5-H {
+        text-align: center;
+        width: 24%;
+    }
+
+    .m2col-2 {
+        text-align: left;
+        width: 24%;
+    }
+
+    .m2col-3 {
+        text-align: left;
+        width: 24%;
+    }
+
+    .m2col-4 {
+        text-align: left;
+        width: 24%;
+    }
+
+    .m2col-5 {
+        text-align: left;
+        width: 24%;
+    }
+
+    .ccol-1 {
+        text-align: center;
+        width: 2%;
+    }
+
+    .ccol-2-H {
+        text-align: center;
+        width: 38%;
+    }
+
+    .ccol-3-H {
+        text-align: center;
+        width: 60%;
+    }
+
+    .ccol-2 {
+        text-align: left;
+        width: 38%;
+    }
+
+    .ccol-3 {
+        text-align: left;
+        width: 60%;
+    }
+
+    .button-pdf {
+        background-color: #f30d0d;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 25px;
+        /* Bo tròn góc */
+        font-size: 16px;
+        cursor: pointer;
+        position: fixed;
+        bottom: 20px;
+        z-index: 10;
+        /* Cố định ở dưới cùng */
+        left: 30%;
+        /* Căn giữa */
+        transform: translateX(-50%);
+        /* Căn giữa chính xác */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        /* Bóng mờ phía dưới */
+        transition: background-color 0.3s ease;
+        opacity: 0.9;
+        white-space: nowrap;
+        /* Ngăn nội dung xuống dòng */
+    }
+
+    .button-pdf:hover {
+        background-color: #910707;
+    }
+}
