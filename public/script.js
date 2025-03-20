@@ -146,7 +146,6 @@ function displayDetailData(filteredRows, tableBodyId) {
             // Công thức Kích thước 1, Diễn giải, Công thức Kích thước 2,
             // Diễn giải, Công thức Số lượng, Diễn giải
             rowHtml += `<td class="borderedcol-m2-2">${item.loaiVattu || ''}</td>`;
-            rowHtml += `<td class="borderedcol-m2-2">${item.loaiVattu || ''}</td>`;
             rowHtml += `<td class="borderedcol-m2-3">${item.ctVattu || ''}</td>`;
             rowHtml += `<td class="borderedcol-m2-4">${item.dienGiaiVt || ''}</td>`;
             rowHtml += `<td class="borderedcol-m2-5">${item.ctKT1 || ''}</td>`;
