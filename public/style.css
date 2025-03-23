@@ -316,18 +316,6 @@ img {
         width: 100%;
         height: 100%;
     }
-
-    .button-excel {
-        display: none;
-    }
-
-    .button-excel-pcy {
-        display: none;
-    }
-
-    .button-pdf {
-        display: none;
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -393,93 +381,240 @@ img {
         font-size: 9px;
     }
 
-    .button-excel {
-        background-color: #0c9c07;
-        color: white;
-        padding: 15px 30px;
-        border: none;
-        width: 130px;
-        border-radius: 50px;
-        /* Bo tròn góc */
-        font-size: 16px;
-        cursor: pointer;
-        position: fixed;
-        bottom: 20px;
-        z-index: 10;
-        /* Cố định ở dưới cùng */
-        left: 50%;
-        /* Căn giữa */
-        transform: translateX(-50%);
-        /* Căn giữa chính xác */
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        /* Bóng mờ phía dưới */
-        transition: background-color 0.3s ease;
-        opacity: 0.9;
-        white-space: nowrap;
-        /* Ngăn nội dung xuống dòng */
+    .bordered-table-m th,
+    .bordered-table-m td,
+    .bordered-table-m2 th,
+    .bordered-table-m2 td,
+    .bordered-table-c th,
+    .bordered-table-c td {
+        border: 0.5px solid black;
+        padding: 5px;
+        word-wrap: break-word;
+        page-break-inside: avoid;
     }
 
-    .button-excel:hover {
-        background-color: #03580e;
+    .borderedcol-m-1 {
+        width: 1%;
+        text-align: center;
     }
 
-    .button-excel-pcy {
-        background-color: #0c9c07;
-        color: white;
-        padding: 15px 30px;
-        border: none;
-        width: 130px;
-        border-radius: 50px;
-        /* Bo tròn góc */
-        font-size: 16px;
-        cursor: pointer;
-        position: fixed;
-        bottom: 20px;
-        z-index: 10;
-        /* Cố định ở dưới cùng */
-        left: 80%;
-        /* Căn giữa */
-        transform: translateX(-50%);
-        /* Căn giữa chính xác */
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        /* Bóng mờ phía dưới */
-        transition: background-color 0.3s ease;
-        opacity: 0.9;
-        white-space: nowrap;
-        /* Ngăn nội dung xuống dòng */
+    .borderedcol-m-2-head {
+        width: 4%;
+        text-align: center;
     }
 
-    .button-excel-pcy:hover {
-        background-color: #03580e;
+    .borderedcol-m-3-head {
+        width: 21%;
+        text-align: center;
     }
 
-    .button-pdf {
-        background-color: #f30d0d;
-        color: white;
-        padding: 15px 30px;
-        border: none;
-        width: 130px;
-        border-radius: 50px;
-        /* Bo tròn góc */
-        font-size: 16px;
-        cursor: pointer;
-        position: fixed;
-        bottom: 20px;
-        z-index: 10;
-        /* Cố định ở dưới cùng */
-        left: 20%;
-        /* Căn giữa */
-        transform: translateX(-50%);
-        /* Căn giữa chính xác */
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        /* Bóng mờ phía dưới */
-        transition: background-color 0.3s ease;
-        opacity: 0.9;
-        white-space: nowrap;
-        /* Ngăn nội dung xuống dòng */
+    .borderedcol-m-4-head {
+        width: 11%;
+        text-align: center;
     }
 
-    .button-pdf:hover {
-        background-color: #910707;
+    .borderedcol-m-5-head {
+        width: 21%;
+        text-align: center;
+    }
+
+    .borderedcol-m-6-head {
+        width: 11%;
+        text-align: center;
+    }
+
+    .borderedcol-m-7-head {
+        width: 21%;
+        text-align: center;
+    }
+
+    .borderedcol-m-8-head {
+        width: 10%;
+        text-align: center;
+    }
+
+    .borderedcol-m-2 {
+        width: 4%;
+        text-align: left;
+    }
+
+    .borderedcol-m-3 {
+        width: 21%;
+        text-align: left;
+    }
+
+    .borderedcol-m-4 {
+        width: 11%;
+        text-align: left;
+    }
+
+    .borderedcol-m-5 {
+        width: 21%;
+        text-align: left;
+    }
+
+    .borderedcol-m-6 {
+        width: 11%;
+        text-align: left;
+    }
+
+    .borderedcol-m-7 {
+        width: 21%;
+        text-align: left;
+    }
+
+    .borderedcol-m-8 {
+        width: 10%;
+        text-align: left;
+    }
+
+    .borderedcol-m2-1 {
+        width: 1%;
+        text-align: center;
+    }
+
+    .borderedcol-m2-2-head {
+        width: 4%;
+        text-align: center;
+    }
+
+    .borderedcol-m2-3-head {
+        width: 16%;
+        text-align: center;
+    }
+
+    .borderedcol-m2-4-head {
+        width: 11%;
+        text-align: center;
+    }
+
+    .borderedcol-m2-5-head {
+        width: 16%;
+        text-align: center;
+    }
+
+    .borderedcol-m2-6-head {
+        width: 11%;
+        text-align: center;
+    }
+
+    .borderedcol-m2-7-head {
+        width: 16%;
+        text-align: center;
+    }
+
+    .borderedcol-m2-8-head {
+        width: 10%;
+        text-align: center;
+    }
+
+    .borderedcol-m2-9-head {
+        width: 10%;
+        text-align: center;
+    }
+
+    .borderedcol-m2-10-head {
+        width: 5%;
+        text-align: center;
+    }
+
+    .borderedcol-m2-2 {
+        width: 4%;
+        text-align: left;
+    }
+
+    .borderedcol-m2-3 {
+        width: 16%;
+        text-align: left;
+    }
+
+    .borderedcol-m2-4 {
+        width: 11%;
+        text-align: left;
+    }
+
+    .borderedcol-m2-5 {
+        width: 16%;
+        text-align: left;
+    }
+
+    .borderedcol-m2-6 {
+        width: 11%;
+        text-align: left;
+    }
+
+    .borderedcol-m2-7 {
+        width: 16%;
+        text-align: left;
+    }
+
+    .borderedcol-m2-8 {
+        width: 10%;
+        text-align: left;
+    }
+
+    .borderedcol-m2-9 {
+        width: 10%;
+        text-align: left;
+    }
+
+    .borderedcol-m2-10 {
+        width: 5%;
+        text-align: left;
+    }
+
+    .borderedcol-c-1 {
+        width: 1%;
+        text-align: center;
+    }
+
+    .borderedcol-c-2-head {
+        width: 5%;
+        text-align: center;
+    }
+
+    .borderedcol-c-3-head {
+        width: 31%;
+        text-align: center;
+    }
+
+    .borderedcol-c-4-head {
+        width: 16%;
+        text-align: center;
+    }
+
+    .borderedcol-c-5-head {
+        width: 31%;
+        text-align: center;
+    }
+
+    .borderedcol-c-6-head {
+        width: 16%;
+        text-align: center;
+    }
+
+    .borderedcol-c-2 {
+        width: 5%;
+        text-align: left;
+    }
+
+    .borderedcol-c-3 {
+        width: 31%;
+        text-align: left;
+    }
+
+    .borderedcol-c-4 {
+        width: 16%;
+        text-align: left;
+    }
+
+    .borderedcol-c-5 {
+        width: 31%;
+        text-align: left;
+    }
+
+    .borderedcol-c-6 {
+        width: 16%;
+        text-align: left;
     }
 }
